@@ -1,11 +1,11 @@
 .PHONY: start, format, lint
 
 format:
-	poetry run ruff format .
-	poetry run ruff --select I --fix .
+	uv run ruff format .
+	uvrun ruff --select I --fix .
 
 lint:
-	poetry run ruff .
-	poetry run ruff format . --diff
-	poetry run ruff --select I .
+	uvrun ruff .
+	uv run ruff format . --diff
+	uv run ruff --select I .
 
